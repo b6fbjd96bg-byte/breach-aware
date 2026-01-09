@@ -1,4 +1,5 @@
-import { Shield, Linkedin, Twitter } from "lucide-react";
+import { Shield, Linkedin, Twitter, Github, Mail, Phone, MapPin, Facebook, Instagram, Youtube } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -7,22 +8,49 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="md:col-span-2">
-            <a href="#" className="flex items-center gap-2 mb-4">
+            <Link to="/" className="flex items-center gap-2 mb-4">
               <Shield className="h-7 w-7 text-primary" />
               <span className="text-lg font-bold tracking-wider">
                 <span className="text-foreground">PERIMETER</span>
                 <span className="text-primary"> X</span>
               </span>
-            </a>
+            </Link>
             <p className="text-muted-foreground text-sm max-w-md leading-relaxed">
               Defining the Next Edge of Defense. PerimeterX delivers expert-driven cybersecurity solutions to protect your organization against modern cyber threats.
             </p>
-            <div className="flex gap-4 mt-6">
+            
+            {/* Contact Info with Icons */}
+            <div className="mt-6 space-y-2">
+              <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                <Mail className="h-4 w-4 text-primary" />
+                <span>contact@perimeterx.io</span>
+              </div>
+              <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                <Phone className="h-4 w-4 text-primary" />
+                <span>+1 (800) 555-SECX</span>
+              </div>
+              <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                <MapPin className="h-4 w-4 text-primary" />
+                <span>San Francisco, CA</span>
+              </div>
+            </div>
+            
+            {/* Social Icons */}
+            <div className="flex gap-3 mt-6">
               <a href="#" className="h-10 w-10 rounded-lg bg-muted/50 flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-all duration-300">
                 <Linkedin className="h-5 w-5" />
               </a>
               <a href="#" className="h-10 w-10 rounded-lg bg-muted/50 flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-all duration-300">
                 <Twitter className="h-5 w-5" />
+              </a>
+              <a href="#" className="h-10 w-10 rounded-lg bg-muted/50 flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-all duration-300">
+                <Github className="h-5 w-5" />
+              </a>
+              <a href="#" className="h-10 w-10 rounded-lg bg-muted/50 flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-all duration-300">
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a href="#" className="h-10 w-10 rounded-lg bg-muted/50 flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-all duration-300">
+                <Youtube className="h-5 w-5" />
               </a>
             </div>
           </div>
@@ -31,10 +59,12 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4 text-sm tracking-wide">Services</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#services" className="hover:text-primary transition-colors">Penetration Testing</a></li>
-              <li><a href="#services" className="hover:text-primary transition-colors">Vulnerability Assessment</a></li>
-              <li><a href="#services" className="hover:text-primary transition-colors">Red Team Operations</a></li>
-              <li><a href="#services" className="hover:text-primary transition-colors">Cloud Security</a></li>
+              <li><Link to="/services/penetration-testing" className="hover:text-primary transition-colors">Penetration Testing</Link></li>
+              <li><Link to="/services/vulnerability-assessment" className="hover:text-primary transition-colors">Vulnerability Assessment</Link></li>
+              <li><Link to="/services/red-team-operations" className="hover:text-primary transition-colors">Red Team Operations</Link></li>
+              <li><Link to="/services/cloud-security-assessment" className="hover:text-primary transition-colors">Cloud Security</Link></li>
+              <li><Link to="/services/web-application-security" className="hover:text-primary transition-colors">Web App Security</Link></li>
+              <li><Link to="/services/compliance-auditing" className="hover:text-primary transition-colors">Compliance Auditing</Link></li>
             </ul>
           </div>
 
