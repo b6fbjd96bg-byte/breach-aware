@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { Shield, Target, Users, Award, Linkedin, Twitter, Mail, CheckCircle } from "lucide-react";
+import { Shield, Target, Users, Award, Linkedin, Twitter, Mail, CheckCircle, Brain, FileCheck, Wrench, TrendingUp, Zap, Cloud } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const teamMembers = [
@@ -64,9 +64,43 @@ const values = [
   },
 ];
 
+const whyChooseUs = [
+  {
+    icon: Brain,
+    title: "Human Intelligence First",
+    description: "Manual-first, research-driven methodology that uncovers deep-seated vulnerabilities automated tools miss.",
+  },
+  {
+    icon: FileCheck,
+    title: "Zero-False-Positive Guarantee",
+    description: "Every finding is manually verified. No noise, no wasted time chasing phantom vulnerabilities.",
+  },
+  {
+    icon: Wrench,
+    title: "Solved for X Remediation",
+    description: "We don't just report problems—we provide specific code patches and direct engineering support.",
+  },
+  {
+    icon: Cloud,
+    title: "Complex Environment Expertise",
+    description: "Specialized in Smart Contracts, IoT, and Cloud infrastructure security assessments.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Business-Centric Reporting",
+    description: "Bridge the gap between technical risk and executive decision-making with actionable insights.",
+  },
+  {
+    icon: Zap,
+    title: "Security as Advantage",
+    description: "Transform security from a technical hurdle into a powerful competitive business advantage.",
+  },
+];
+
 const AboutUs = () => {
   const heroAnimation = useScrollAnimation({ threshold: 0.2 });
   const missionAnimation = useScrollAnimation({ threshold: 0.2 });
+  const whyUsAnimation = useScrollAnimation({ threshold: 0.1 });
   const valuesAnimation = useScrollAnimation({ threshold: 0.1 });
   const teamAnimation = useScrollAnimation({ threshold: 0.1 });
   const historyAnimation = useScrollAnimation({ threshold: 0.1 });
@@ -132,8 +166,59 @@ const AboutUs = () => {
         </div>
       </section>
 
+      {/* Why Choose ParameterX */}
+      <section className="py-20 relative overflow-hidden">
+        <div className="absolute inset-0 gradient-radial opacity-20" />
+        <div 
+          ref={whyUsAnimation.ref}
+          className={`container mx-auto px-4 relative z-10 transition-all duration-700 ${
+            whyUsAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
+          <div className="text-center mb-12">
+            <span className="text-primary text-sm font-semibold tracking-widest uppercase mb-4 block">Why Choose Us</span>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Why <span className="text-primary">ParameterX</span>?
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+              Partnering with ParameterX means choosing a security firm that prioritizes human intelligence over automated convenience. 
+              While many competitors rely on surface-level scans that produce "noisy" results, we utilize a manual-first, 
+              research-driven methodology to uncover deep-seated vulnerabilities in complex environments.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+            {whyChooseUs.map((item, index) => (
+              <Card 
+                key={index} 
+                className="group bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all duration-500 hover:-translate-y-1"
+                style={{ transitionDelay: `${index * 100}ms` }}
+              >
+                <CardContent className="p-6">
+                  <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
+                    <item.icon className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          {/* Highlight Box */}
+          <div className="mt-12 p-8 rounded-2xl bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 border border-primary/20 text-center">
+            <p className="text-lg text-foreground leading-relaxed max-w-3xl mx-auto">
+              <span className="font-semibold text-primary">"Solved for X"</span> — We don't just deliver a list of problems; 
+              we provide specific code patches and direct engineering support to ensure your vulnerabilities are actually closed.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Core Values */}
-      <section className="py-20 relative">
+      <section className="py-20 bg-secondary/30 relative">
         <div className="absolute inset-0 gradient-radial opacity-20" />
         <div 
           ref={valuesAnimation.ref}
