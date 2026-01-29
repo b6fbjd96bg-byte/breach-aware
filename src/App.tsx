@@ -16,6 +16,7 @@ import NetworkPentest from "./pages/NetworkPentest";
 import SourceCodeAudit from "./pages/SourceCodeAudit";
 import IoTPentest from "./pages/IoTPentest";
 import AISecurityAssessment from "./pages/AISecurityAssessment";
+import BlockchainSecurity from "./pages/BlockchainSecurity";
 import LoadingScreen from "./components/LoadingScreen";
 import CustomCursor from "./components/CustomCursor";
 
