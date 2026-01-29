@@ -1,6 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Shield, Target, Cloud, Network, Code, Cpu, Brain, Building2, ArrowRight } from "lucide-react";
+import { Shield, Target, Cloud, Network, Code, Cpu, Brain, Building2, ArrowRight, Boxes } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useParallax } from "@/hooks/useParallax";
@@ -71,6 +71,13 @@ const services: Service[] = [
     title: "AI Security Assessment",
     description: "We identify critical vulnerabilities in production LLMs and AI systems that expose novel attack paths.",
     link: "/services/ai-security-assessment",
+    accent: "purple",
+  },
+  {
+    icon: Boxes,
+    title: "Blockchain Security",
+    description: "Secure decentralized systems with smart contract audits, DeFi protocol testing, and Web3 security.",
+    link: "/services/blockchain-security",
     accent: "purple",
   },
 ];
