@@ -20,6 +20,9 @@ import AISecurityAssessment from "./pages/AISecurityAssessment";
 import BlockchainSecurity from "./pages/BlockchainSecurity";
 import Auth from "./pages/Auth";
 import Dashboard from "./pages/Dashboard";
+import Careers from "./pages/Careers";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 import ProtectedRoute from "./components/ProtectedRoute";
 import LoadingScreen from "./components/LoadingScreen";
 import CustomCursor from "./components/CustomCursor";
@@ -66,6 +69,9 @@ const App = () => (
             <Route path="/services/ai-security-assessment" element={<AISecurityAssessment />} />
             <Route path="/services/blockchain-security" element={<BlockchainSecurity />} />
             <Route path="/services/web-application-security" element={<WebApplicationSecurity />} />
+            <Route path="/careers" element={<Careers />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-of-service" element={<TermsOfService />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

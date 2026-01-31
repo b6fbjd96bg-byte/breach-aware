@@ -72,10 +72,10 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4 text-sm tracking-wide">Company</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#about" className="hover:text-primary transition-colors">About Us</a></li>
-              <li><a href="#why-us" className="hover:text-primary transition-colors">Why Choose Us</a></li>
-              <li><a href="#contact" className="hover:text-primary transition-colors">Contact</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Careers</a></li>
+              <li><Link to="/about" className="hover:text-primary transition-colors">About Us</Link></li>
+              <li><Link to="/#why-us" className="hover:text-primary transition-colors">Why Choose Us</Link></li>
+              <li><Link to="/#contact" className="hover:text-primary transition-colors">Contact</Link></li>
+              <li><Link to="/careers" className="hover:text-primary transition-colors">Careers</Link></li>
             </ul>
           </div>
         </div>
@@ -86,8 +86,8 @@ const Footer = () => {
             © 2025 ParameterX. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm text-muted-foreground">
-            <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
+            <Link to="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link>
+            <Link to="/terms-of-service" className="hover:text-primary transition-colors">Terms of Service</Link>
           </div>
         </div>
 
